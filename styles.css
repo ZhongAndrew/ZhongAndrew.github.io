@@ -1,0 +1,328 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ceeef8;
+    min-height: 100vh; /* 確保 body 至少佔滿整個視窗高度 */
+    display: flex;
+    flex-direction: column;
+    color: rgb(238, 238, 243);
+}
+
+header {
+    background-color: #8d6dde;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 16px; /* 調整導覽列連結的字體大小 */
+}
+
+nav ul li a:hover {
+    background-color: #bfd9f2;
+}
+main {
+    flex: 1; /* 讓 main 區域自動填滿剩餘空間 */
+    padding: 150px 20px 60px; /* 調整 padding 以避免內容被固定的 header 擋住 */
+    background: url('images/宇宙2.jpg') no-repeat center center fixed; /* 設置背景圖片 */
+    background-size: cover; /* 確保背景圖片覆蓋整個區域 */
+    position: relative; /* 為了設置透明度 */
+    font-size: 19px; /* 調整主要內容的字體大小 */
+    bottom: 30px;
+    margin-top: 30px;
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* 設置透明度，這裡是50%透明度 */
+    z-index: -1; /* 確保透明層在內容後面 */
+    opacity: 0.1;
+}
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.video-container {
+    position: relative;
+    width: 50%; /* 調整寬度 */
+    max-width: 600px; /* 設置最大寬度 */
+    height: auto; /* 自動調整高度 */
+    background:transparent;
+    margin-bottom: 20px;
+    margin-left: 200px;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 300px; /* 設置固定高度 */
+}
+
+section {
+    margin-bottom: 20px; /* 每個 section 之間的間距 */
+}
+
+.first h2{
+    margin-top: 50px;
+    text-align: center; 
+}
+
+.first p{
+   margin-left: 400px;
+}
+
+.second h2{
+    margin-top: 50px;
+    text-align: center; 
+}
+
+.second p{
+    margin-left: 450px;
+}
+
+.third h2{
+    margin-top: 50px;
+    text-align: center; 
+}
+
+.third p{
+    margin-left: 400px;
+}
+
+.testhome{
+   text-align: center;
+   margin-top: 190px;
+}
+
+.testhome p{
+    margin: 50px;
+}
+
+.testhome button{
+    margin-right: 120px;
+}
+
+.test{
+    margin-left: 400px;
+}
+
+.question{
+    margin-left: 130px;
+}
+
+.mental{
+    margin-left: 200px;
+}
+
+#result {
+    margin-left: 125px; /* 調整這個值來控制右移的距離 */
+}
+
+
+button {
+    background-color: #8a8ad5;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 125px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #4c3798;
+}
+
+.disease {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 180px;
+}
+
+.disease-item {
+    margin: 20px /* 調整 margin 以避免跑版 */
+    
+}
+
+.image-container {
+    position: relative;
+    width: 200px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    margin: 0 auto; /* 居中圖片容器 */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container button {
+    position: absolute;
+    bottom: 10px;
+    left: 55%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: -10px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.image-container button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer{
+    background-color: #c3a0f8;
+    color: #070f59;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+/* 隱藏 .menu 按鈕 */
+.menu {
+    display: none;
+}
+
+/* 響應式設計 */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* 隱藏原本的導覽列 */
+    }
+
+    .menu {
+        display: block;
+        background-color: transparent;
+        color: white;
+        font-size: 35px;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .menu-items {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start; /* 靠左側 */
+        background-color: rgba(0, 0, 0, 0.7); /* 透明黑背景 */
+        position: absolute;
+        top: 96px;
+        left: 0px; /* 靠左側 */
+        width: 23%; /* 版面小一點 */
+        padding: 8px; /* 增加內距 */
+    }
+
+    .menu-items li {
+        margin:10px 0;
+        width: 40%; /* 確保每個項目佔滿整個寬度 */
+        text-align: left; /* 讓文字靠左 */
+    }
+
+    .menu-items li a {
+        display: block;
+        width: 80%;
+        padding: 5px 20px; /* 增加上下內距 */
+        color: white; /* 確保文字顏色為白色 */
+    }
+
+    .menu-items li a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* 增加hover效果 */
+    }
+
+    .video-container {
+        width: 80%;
+        margin-left: 18px; 
+    }
+
+    .first, .mental {
+        margin-top: -30px;
+    }
+    
+    .first p, .second p, .third p, .mental, #result, button {
+        float: none;
+        margin-left: 20px; /* 調整這個值來控制左移的距離 */
+        display: block;
+    }
+
+    .testhome p{
+        margin-left:55px;
+    }
+
+    .testhome button{
+        margin-left: 300px;
+    }
+
+    .test {
+        float: none;
+        margin-left: 20px; /* 調整這個值來控制左移的距離 */
+        display: block;
+        margin-top: -30px;
+    }
+
+    button{
+        margin-left: 20px;
+    }
+    
+    #result{
+        margin-right: 430px;
+        white-space: nowrap; /* 防止文字換行 */
+    }
+
+    .question {
+        float: none;
+        margin-left: 20px; /* 調整這個值來控制左移的距離 */
+        display: block;
+    }
+
+    .disease {
+        flex-direction: column;
+    }
+
+    .disease-item {
+        margin: 120px 0; /* 原本的 margin */
+        margin-top: -100px; /* 調整這個值來控制向上移動的距離 */
+    }
+}

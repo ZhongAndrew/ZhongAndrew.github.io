@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理健康網站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button class="menu" onclick="toggleMenu()">☰</button>
+        <h1>心理健康網站</h1>
+        <nav>
+            <ul class="menu-items">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="diseases.html">心理疾病介紹</a></li>
+                <li><a href="quizhome.html">測驗問卷</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="quiz" class="test">
+            <h2>請回答以下問題來了解您對心理健康狀況的理解程度</h2>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. 憂鬱症主要影響個體的哪些方面？</p>
+                    <input type="radio" id="q1-1" name="q1" value="0"> 飲食和睡眠<br>
+                    <input type="radio" id="q1-2" name="q1" value="10"> 認知、生理功能、思考及行為<br>
+                    <input type="radio" id="q1-3" name="q1" value="0"> 運動和社交<br>
+                    <input type="radio" id="q1-4" name="q1" value="0"> 財務管理和學業<br>
+                </div>
+                <div class="question">
+                    <p>2. 哪種方法對於預防躁鬱症的復發最為有效？</p>
+                    <input type="radio" id="q2-1" name="q2" value="0"> 偶爾停藥<br>
+                    <input type="radio" id="q2-2" name="q2" value="10"> 持續治療和保持健康的生活方式<br>
+                    <input type="radio" id="q2-3" name="q2" value="0"> 減少社交活動<br>
+                    <input type="radio" id="q2-4" name="q2" value="0"> 單純依賴藥物治療<br>
+                </div>
+                <div class="question">
+                    <p>3. 恐慌症的特徵是什麼？</p>
+                    <input type="radio" id="q3-1" name="q3" value="0"> 長期的低落情緒<br>
+                    <input type="radio" id="q3-2" name="q3" value="10"> 突如其來的強烈恐懼感，通常無實際威脅<br>
+                    <input type="radio" id="q3-3" name="q3" value="0"> 經常出現幻覺和妄想<br>
+                    <input type="radio" id="q3-4" name="q3" value="0"> 反覆進行強迫行為<br>
+                </div>
+                <div class="question">
+                    <p>4. 以下哪一項不是思覺失調症的症狀？</p>
+                    <input type="radio" id="q4-1" name="q4" value="0"> 聽幻覺<br>
+                    <input type="radio" id="q4-2" name="q4" value="10"> 社交回避<br>
+                    <input type="radio" id="q4-3" name="q4" value="0"> 妄想<br>
+                    <input type="radio" id="q4-4" name="q4" value="0"> 與現實脫節<br>
+                </div>
+                <div class="question">
+                    <p>5. 強迫症患者常見的強迫行為是什麼？</p>
+                    <input type="radio" id="q5-1" name="q5" value="0"> 無故發怒<br>
+                    <input type="radio" id="q5-2" name="q5" value="10"> 重複檢查門窗是否關好<br>
+                    <input type="radio" id="q5-3" name="q5" value="0"> 過度食慾增加<br>
+                    <input type="radio" id="q5-4" name="q5" value="0"> 長時間坐著不動<br>
+                </div>
+                <div class="question">
+                    <p>6. 創傷後壓力症（PTSD）的常見症狀包括什麼？</p>
+                    <input type="radio" id="q6-1" name="q6" value="0"> 過度樂觀<br>
+                    <input type="radio" id="q6-2" name="q6" value="10"> 創傷事件的經驗再現<br>
+                    <input type="radio" id="q6-3" name="q6" value="0"> 失憶<br>
+                    <input type="radio" id="q6-4" name="q6" value="0"> 對食物的渴望增加<br>
+                </div>
+                <div class="question">
+                    <p>7. 下列哪一項是治療憂鬱症的主要方法之一？</p>
+                    <input type="radio" id="q7-1" name="q7" value="0"> 強迫運動<br>
+                    <input type="radio" id="q7-2" name="q7" value="10"> 心理治療<br>
+                    <input type="radio" id="q7-3" name="q7" value="0"> 完全依賴社會支持<br>
+                    <input type="radio" id="q7-4" name="q7" value="0"> 多次自我診斷<br>
+                </div>
+                <div class="question">
+                    <p>8. 躁鬱症的躁期症狀通常包括什麼？</p>
+                    <input type="radio" id="q8-1" name="q8" value="10"> 過度自信和睡眠需求減少<br>
+                    <input type="radio" id="q8-2" name="q8" value="0"> 持續的悲傷和無動力<br>
+                    <input type="radio" id="q8-3" name="q8" value="0"> 對社交活動失去興趣<br>
+                    <input type="radio" id="q8-4" name="q8" value="0"> 持續的低自尊<br>
+                </div>
+                <div class="question">
+                    <p>9. 在治療恐慌症時，哪種技術有助於減少症狀？</p>
+                    <input type="radio" id="q9-1" name="q9" value="0"> 禁食<br>
+                    <input type="radio" id="q9-2" name="q9" value="10"> 深呼吸和肌肉放鬆技術<br>
+                    <input type="radio" id="q9-3" name="q9" value="0"> 過度運動<br>
+                    <input type="radio" id="q9-4" name="q9" value="0"> 長期隔離<br>
+                </div>
+                <div class="question">
+                    <p>10. 思覺失調症的治療通常包括什麼？</p>
+                    <input type="radio" id="q10-1" name="q10" value="0"> 只依賴藥物治療<br>
+                    <input type="radio" id="q10-2" name="q10" value="10"> 藥物治療與心理社會治療相結合<br>
+                    <input type="radio" id="q10-3" name="q10" value="0"> 自我管理和避開社會<br>
+                    <input type="radio" id="q10-4" name="q10" value="0"> 不治療，自行康復<br>
+                </div>
+                <button type="button" onclick="submitQuiz()">提交</button>
+                <button type="button" id="resetButton" onclick="resetQuiz()" style="display: none;">重置</button>
+            </form>
+            <p id="result"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 心理健康網站. 版權所有.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+

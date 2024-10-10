@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>心理健康網站</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.onload = function(){
+            alert('準備好進行測驗了嗎?');
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <button class="menu" onclick="toggleMenu()">☰</button>
+        <h1>心理健康網站</h1>
+        <nav>
+            <ul class="menu-items">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="diseases.html">心理疾病介紹</a></li>
+                <li><a href="quizhome.html">測驗問卷</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="testhome">
+            <h2>測驗問卷</h2>
+            <p>共10題單選題，每題10分，滿分100分。</p>
+            <button onclick="location.href='quiz.html'">開始測驗</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 心理健康網站. 版權所有.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
